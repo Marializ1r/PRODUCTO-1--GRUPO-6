@@ -1,0 +1,21 @@
+! ============================================================
+! ISP - Script de configuracion (Equipo 6)
+! Simula Internet. Ruta de retorno hacia la red interna.
+! ============================================================
+enable
+configure terminal
+hostname ISP
+interface Ethernet0/0
+ switchport mode access
+ no shutdown
+exit
+interface Vlan1
+ ip address 203.0.113.1 255.255.255.252
+ no shutdown
+exit
+ip default-gateway 203.0.113.2
+ip route 172.26.0.0 255.255.0.0 203.0.113.2
+end
+write memory
+show ip interface brief
+show ip route

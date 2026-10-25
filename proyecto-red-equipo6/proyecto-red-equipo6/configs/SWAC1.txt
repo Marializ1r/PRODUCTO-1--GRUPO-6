@@ -1,0 +1,39 @@
+! ============================================================
+! SWAC1 - Script de configuracion (Equipo 6)
+! Pegar en modo privilegiado. Orden recomendado en README.
+! ============================================================
+enable
+config
+hostname SWAC1
+
+vtp domain EQUIPO6-CORE
+vtp mode client
+
+
+spanning-tree mode rapid-pvst
+
+interface e1/0
+ description DOC1
+ switchport mode access
+ switchport access vlan 10
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ no shutdown
+
+interface e0/0
+ description UPLINK_SWM1
+  switchport trunk encapsulation dot1q
+ switchport mode trunk
+ switchport trunk allowed vlan 10,20,30,40,999
+ no shutdown
+
+interface e0/1
+ description UPLINK_SWM2
+  switchport trunk encapsulation dot1q
+ switchport mode trunk
+ switchport trunk allowed vlan 10,20,30,40,999
+ no shutdown
+
+
+en
+wr

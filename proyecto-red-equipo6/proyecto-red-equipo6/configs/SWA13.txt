@@ -1,0 +1,46 @@
+! ============================================================
+! SWA13 - Script de configuracion (Equipo 6)
+! Pegar en modo privilegiado. Orden recomendado en README.
+! ============================================================
+enable
+config
+hostname SWA13
+
+vtp domain EQUIPO6-R2
+vtp mode server
+vtp version 2
+
+vlan 50
+ name FINANZAS
+vlan 60
+ name ACADEMICOS
+vlan 999
+ name BLACKHOLE
+
+spanning-tree mode rapid-pvst
+
+interface e0/0
+ description TRUNK_A_R2
+ switchport trunk encapsulation dot1Q
+ switchport mode trunk
+ switchport trunk allowed vlan 50,60,999
+ no shutdown
+
+interface e1/0
+ description ACA1
+ switchport mode access
+ switchport access vlan 60
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ no shutdown
+
+interface e2/0
+ description FIN1
+ switchport mode access
+ switchport access vlan 50
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ no shutdown
+
+en
+wr

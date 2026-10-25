@@ -1,0 +1,13 @@
+============================================================
+ PRUEBAS DE SEGURIDAD - GUIA RAPIDA
+============================================================
+ACL BLOQUEO-ADMIN (Estudiantes NO debe llegar a Gestion)
+  EST1> ping <IP de GES1>            -> debe fallar
+ACL FINANZAS-SEGURIDAD (Finanzas NO debe llegar a Estudiantes)
+  FIN1> ping <IP de EST1>            -> debe fallar
+  FIN1> ping 172.26.9.130            -> debe responder (su gateway)
+SSH solo desde Gestion
+  Desde GES1:   ssh <usuario>@172.26.10.66   -> debe conectar
+  Desde otra VLAN                            -> debe ser rechazado
+Revisar contadores:
+  show access-lists

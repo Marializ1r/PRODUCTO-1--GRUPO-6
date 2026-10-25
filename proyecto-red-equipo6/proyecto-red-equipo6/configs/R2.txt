@@ -1,0 +1,91 @@
+! ============================================================
+! R2 - Script de configuracion (Equipo 6)
+! Pegar en modo privilegiado. Orden recomendado en README.
+! ============================================================
+enable
+config
+hostname R2
+
+ip routing
+
+interface s3/0
+ description P2P_A_R1_CORE
+ ip address 172.26.10.162 255.255.255.252
+ no shutdown
+
+interface e0/0
+ description TRUNK_A_SWA13
+ no ip address
+ no shutdown
+
+interface e0/0.50
+ encapsulation dot1Q 50
+ ip address 172.26.9.130 255.255.255.128
+
+interface e0/0.60
+ encapsulation dot1Q 60
+ ip address 172.26.9.2 255.255.255.128
+
+interface e0/1
+ description TRUNK_A_SW_SERVICIOS
+ no ip address
+ no shutdown
+
+interface e0/1.70
+ encapsulation dot1Q 70
+ ip address 172.26.10.2 255.255.255.192
+
+router ospf 10
+ router-id 2.2.2.2
+ network 172.26.9.0 0.0.0.127 area 0
+ network 172.26.9.128 0.0.0.127 area 0
+ network 172.26.10.0 0.0.0.63 area 0
+ network 172.26.10.160 0.0.0.3 area 0
+ passive-interface e0/0.50
+ passive-interface e0/0.60
+ passive-interface e0/1.70
+exit
+
+
+ip access-list extended FINANZAS-SEGURIDAD
+ deny ip 172.26.9.128 0.0.0.127 172.26.0.0 0.0.7.255
+ permit ip 172.26.9.128 0.0.0.127 any
+exit
+
+interface e0/0.50
+ ip access-group FINANZAS-SEGURIDAD in
+exit
+
+service dhcp
+
+ip dhcp excluded-address 172.26.9.1 172.26.9.9
+ip dhcp excluded-address 172.26.9.129 172.26.9.139
+ip dhcp excluded-address 172.26.10.1 172.26.10.9
+
+ip dhcp pool ACADEMICOS
+ network 172.26.9.0 255.255.255.128
+ default-router 172.26.9.2
+ dns-server 8.8.8.8
+exit
+
+ip dhcp pool FINANZAS
+ network 172.26.9.128 255.255.255.128
+ default-router 172.26.9.130
+ dns-server 8.8.8.8
+exit
+
+ip dhcp pool DATACENTER
+ network 172.26.10.0 255.255.255.192
+ default-router 172.26.10.2
+ dns-server 8.8.8.8
+
+en
+wr
+
+! --- Correccion DHCP de FIN1 (permite DHCPDISCOVER antes del deny) ---
+configure terminal
+ip access-list extended FINANZAS-SEGURIDAD
+ 5 permit udp any eq bootpc any eq bootps
+end
+write memory
+

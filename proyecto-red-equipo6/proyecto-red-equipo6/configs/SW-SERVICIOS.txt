@@ -1,0 +1,33 @@
+! ============================================================
+! SW-SERVICIOS - Script de configuracion (Equipo 6)
+! Pegar en modo privilegiado. Orden recomendado en README.
+! ============================================================
+enable
+config
+hostname SW-SERVICIOS
+
+vtp mode transparent
+vlan 70
+ name DATACENTER
+vlan 999
+ name BLACKHOLE
+
+spanning-tree mode rapid-pvst
+
+interface e0/0
+ description TRUNK_A_R2
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ switchport trunk allowed vlan 70,999
+ no shutdown
+
+interface e0/1
+ description SERVICIOS
+ switchport mode access
+ switchport access vlan 70
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ no shutdown
+
+en
+wr

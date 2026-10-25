@@ -1,0 +1,38 @@
+============================================================
+ COMANDOS DE VERIFICACION (show) - EQUIPO 6
+============================================================
+! --- Capa 2 ---
+show vlan brief
+show vtp status
+show interfaces trunk
+show etherchannel summary
+show spanning-tree summary
+show spanning-tree vlan 10
+show spanning-tree vlan 20
+
+! --- Alta disponibilidad ---
+show standby brief
+show standby vlan 10
+
+! --- Enrutamiento ---
+show ip interface brief
+show ip route
+show ip route ospf
+show ip ospf neighbor
+show ip ospf database
+
+! --- Seguridad ---
+show access-lists
+show ip interface vlan 20 | include access list
+show running-config | begin banner motd
+show ip ssh
+
+! --- DHCP ---
+show ip dhcp binding
+show ip dhcp pool
+
+! --- En las PCs (VPCS) ---
+ip dhcp
+show ip
+ping <gateway>
+trace <destino>
