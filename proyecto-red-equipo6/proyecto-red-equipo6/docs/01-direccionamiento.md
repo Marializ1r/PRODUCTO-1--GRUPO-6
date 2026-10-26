@@ -65,4 +65,4 @@ Cada VLAN recibe un `/64`. El orden sigue el tamaño de las redes IPv4 (la red d
 | 9 | Blackhole (R2) | 10 | `2001:25:26:90::/64` | Estática | `fe80::2` |
 | 10 | P2P R1↔R2 | 2 | `2001:25:26:FF::/64` | Manual | — |
 
-> 🚧 **Estado:** plan IPv6 diseñado; configuración en los equipos **pendiente**.
+
