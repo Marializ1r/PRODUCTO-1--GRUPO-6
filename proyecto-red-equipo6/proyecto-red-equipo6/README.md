@@ -43,7 +43,7 @@ Red para una **empresa mediana**, confiable, segura y escalable, con:
 | _Nombre completo_ | _Matrícula_ | _Ej.: Routers y OSPF_ |
 | _Nombre completo_ | _Matrícula_ | _Ej.: ACLs y pruebas de seguridad_ |
 | Rey | _Matrícula_ | Explicación y documentación del Sprint 2 |
-| _Nombre completo_ | _Matrícula_ | _Ej.: Direccionamiento y diseño_ |
+| Marializ Beltre | 2025-0189 | Seguimiento y documentacion del producto |
 
 ---
 
@@ -116,18 +116,6 @@ Red para una **empresa mediana**, confiable, segura y escalable, con:
 
 ---
 
-## 📊 Estado del proyecto
-
-| Sprint | Entregable | Estado |
-|:---:|---|:---:|
-| 1 | Direccionamiento IPv4 (VLSM), plan IPv6, VLANs y VTP | ✅ |
-| 2 | VLANs, VTP, EtherChannel, STP, HSRP, inter-VLAN | ✅ |
-| 3 | OSPFv2, ruta por defecto, ACLs, DHCP, ISP, banners | ✅ |
-| 3 | Conectividad extremo a extremo | ✅ |
-| 3 | Configuración IPv6 en los equipos | 🚧 Pendiente |
-| 3 | Capturas de pruebas y running-configs finales | 🚧 Completar |
-
----
 
 <div align="center">
 
