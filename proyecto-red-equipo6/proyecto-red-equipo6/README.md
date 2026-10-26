@@ -39,10 +39,10 @@ Red para una **empresa mediana**, confiable, segura y escalable, con:
 
 | 👤 Integrante | 🆔 Matrícula | 🛠️ Aporte principal |
 |---|---|---|
-| _Nombre completo_ | _Matrícula_ | _Ej.: Switches core, HSRP_ |
-| _Nombre completo_ | _Matrícula_ | _Ej.: Routers y OSPF_ |
-| _Nombre completo_ | _Matrícula_ | _Ej.: ACLs y pruebas de seguridad_ |
-| Rey | _Matrícula_ | Explicación y documentación del Sprint 2 |
+| Valerie Echavarría | 2024-0319 | Configuración general |
+| Randolf Medina | 2025-1620 | Configuracion general |
+| Jeiren Reyes | 2025-0732 | Explicación y documentación del Sprint 2 |
+| Ely Sanchez | 2025-0819 | Explicación y documentación del Sprint 1 |
 | Marializ Beltre | 2025-0189 | Seguimiento y documentacion del producto |
 
 ---
