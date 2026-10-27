@@ -101,20 +101,6 @@ Red para una **empresa mediana**, confiable, segura y escalable, con:
 
 ---
 
-## 🚀 Despliegue rápido en PNETLab
-
-1. Crear el laboratorio con los nodos de la [topología](#️-topología) y conectar según el [mapa de puertos](docs/02-vlans-vtp.md#-mapa-de-puertos).
-2. Cargar los scripts de [`configs/`](configs/) en este orden:
-   1. Switches de acceso y core (VLANs, VTP, troncales, EtherChannel, STP)
-   2. HSRP e interfaces VLAN (SWM1 y SWM2)
-   3. Routers **R1-CORE** y **R2** (enlaces, subinterfaces, OSPF)
-   4. **ISP**
-   5. ACLs, SSH, DHCP y banners
-3. Guardar con `write memory` en cada equipo.
-4. Verificar con [`comandos/verificacion.txt`](comandos/verificacion.txt) y registrar en [Pruebas](docs/08-pruebas.md).
-
----
-
 
 <div align="center">
 
