@@ -1,7 +1,4 @@
-! ============================================================
-! SWAC2 - Script de configuracion (Equipo 6)
-! Pegar en modo privilegiado. Orden recomendado en README.
-! ============================================================
+
 enable
 config
 hostname SWAC2
