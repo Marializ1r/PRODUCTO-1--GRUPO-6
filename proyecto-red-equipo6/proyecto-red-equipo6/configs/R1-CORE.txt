@@ -1,7 +1,4 @@
-! ============================================================
-! R1-CORE - Script de configuracion (Equipo 6)
-! Pegar en modo privilegiado. Orden recomendado en README.
-! ============================================================
+
 enable
 config
 hostname R1-CORE
