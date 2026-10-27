@@ -1,7 +1,4 @@
-! ============================================================
-! SWM1 - Script de configuracion (Equipo 6)
-! Pegar en modo privilegiado. Orden recomendado en README.
-! ============================================================
+
 enable
 config
 hostname SWM1
