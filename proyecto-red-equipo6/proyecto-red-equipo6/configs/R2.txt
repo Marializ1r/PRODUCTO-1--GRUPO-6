@@ -2,6 +2,7 @@
 enable
 config
 hostname R2
+banner motd @AVISO: ACCESO SOLO A PERSONAL AUTORIZADO-EQUIPO 6@
 
 ip routing
 
