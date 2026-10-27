@@ -49,11 +49,10 @@ Red para una **empresa mediana**, confiable, segura y escalable, con:
 
 ## 🗺️ Topología
 
-> 📸 **Sube tu captura aquí:** guárdala como `img/topologia/topologia.png` y aparecerá sola.
 
 <div align="center">
 
-![Topología PNETLab](./img/topologia/topologia.png)
+<img width="1170" height="659" alt="topologia" src="https://github.com/user-attachments/assets/e779b9ad-b482-41e4-baf6-6a8cf51b4f21" />
 
 <sub>Figura 1. Topología implementada en PNETLab</sub>
 
