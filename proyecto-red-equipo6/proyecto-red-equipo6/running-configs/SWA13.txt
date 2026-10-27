@@ -1,6 +1,0 @@
-! ============================================================
-! SWA13 - RUNNING-CONFIG FINAL
-! Pega aqui la salida completa de:  show running-config
-! (borra estas lineas de instruccion antes de entregar)
-! ============================================================
-
