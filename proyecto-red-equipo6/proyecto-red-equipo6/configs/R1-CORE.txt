@@ -2,37 +2,37 @@
 enable
 config
 hostname R1-CORE
-
+banner motd @AVISO: ACCESO SOLO A PERSONAL AUTORIZADO-EQUIPO 6@
 ip routing
 
 interface s3/0
- description P2P_A_R2
- ip address 172.26.10.161 255.255.255.252
- no shutdown
+description P2P_A_R2
+ip address 172.26.10.161 255.255.255.252
+no shutdown
 
 interface e0/0
- description ENLACE_ENRUTADO_A_SWM1
- ip address 172.26.10.165 255.255.255.252
- no shutdown
+description ENLACE_ENRUTADO_A_SWM1
+ip address 172.26.10.165 255.255.255.252
+no shutdown
 
 interface e0/1
- description ENLACE_ENRUTADO_A_SWM2
- ip address 172.26.10.169 255.255.255.252
- no shutdown
+description ENLACE_ENRUTADO_A_SWM2
+ip address 172.26.10.169 255.255.255.252
+no shutdown
 
 interface e0/2
- description ENLACE_A_ISP
- ip address 203.0.113.2 255.255.255.252
- no shutdown
+description ENLACE_A_ISP
+ip address 203.0.113.2 255.255.255.252
+no shutdown
 
 ip route 0.0.0.0 0.0.0.0 203.0.113.1
 
 router ospf 10
- router-id 1.1.1.1
- network 172.26.10.160 0.0.0.3 area 0
- network 172.26.10.164 0.0.0.3 area 0
- network 172.26.10.168 0.0.0.3 area 0
- default-information originate
+router-id 1.1.1.1
+network 172.26.10.160 0.0.0.3 area 0
+network 172.26.10.164 0.0.0.3 area 0
+network 172.26.10.168 0.0.0.3 area 0
+default-information originate
 
 en
 wr
