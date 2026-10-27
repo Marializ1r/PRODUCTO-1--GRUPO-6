@@ -1,7 +1,4 @@
-! ============================================================
-! ISP - Script de configuracion (Equipo 6)
-! Simula Internet. Ruta de retorno hacia la red interna.
-! ============================================================
+
 enable
 configure terminal
 hostname ISP
